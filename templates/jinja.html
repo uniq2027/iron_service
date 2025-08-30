@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: aqua;
+            border: 2px solid red;
+            width: 20%;
+            list-style-type: none;
+            font-size: 20px;
+            margin: 10px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>wlcome index page....</h1>
+
+    <h1>welcome {{send_data}}</h1>
+
+    <h1>welcome user details {{send_user}}</h1>
+
+
+
+
+ {% for i in send_user%}
+    <li>{{i}}</li>
+
+  {%if i=="sam"%}
+      <h1>welcome {{i}}</h1>
+                                     {% else %}
+      <h1>invalid data</h1>
+   {% endif %}
+
+ {% endfor %}
+
+
+
+ 
+
+
+
+
+       
+    
+</body>
+</html>
+
+
+
+

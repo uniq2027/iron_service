@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+</head>
+<body>
+    <h1>All Users</h1>
+
+    <a href="{{ url_for('add_user') }}">➕ Add User</a>
+    
+    
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Actions</th>
+        </tr>
+
+        {{users}}
+        {% for user in users %}
+
+        
+        <tr>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+            <td>{{ user[2] }}</td>
+            <td>
+                <a href="{{ url_for('update_user', id=user[0]) }}">✏️ Update</a> | 
+                <a href="{{ url_for('delete_user', id=user[0]) }}">🗑️ Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

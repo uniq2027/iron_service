@@ -1,0 +1,45 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet"    href="{{url_for('static',filename='style.css')}}">
+    <style>
+        div{
+            background-color: aqua;
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+  <form method="POST" action="/submit">
+        <label>Enter the User Name:</label>
+        <input name="username">
+        <br>
+        <br>
+        <label>Enter the password:</label>
+        <input name="password"><br>
+        <br>
+        <button>Submit</button>
+    </form>
+    </div>
+  
+</body>
+</html> -->
+
+
+
+<form method="POST">
+  <input type="text" name="username" placeholder="Enter username" required>
+  <input type="password" name="password" placeholder="Enter password" required>
+  <button type="submit">Login</button>
+</form>
+<a href="/register">Don't have an account? Register</a>
